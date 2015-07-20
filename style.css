@@ -1,0 +1,156 @@
+table {
+  font-family: 'Roboto', sans-serif;
+}
+  
+tr {
+  height:600px;
+}
+td {
+  padding-bottom: 5px;
+}
+
+thead {
+  display:none;
+}
+ 
+td:nth-child(1) {
+  display: block;
+  clear:both;
+  font-size: 60px;
+  color:grey;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+  
+td:nth-child(2) {
+  display: block;
+  clear:both;
+  font-size:24px;
+  font-weight: 300;
+}
+  
+td:nth-child(3) {
+  display: block;
+  clear:both;
+  padding-top: 20px;
+}
+  
+td:nth-child(3)::before {
+  content: "Location: ";
+  font-weight: 500;
+  text-transform: uppercase;
+  color:#8ac007;
+}
+  
+td:nth-child(4) {
+  display: block;
+  clear:both;
+}
+  
+td:nth-child(4)::before {
+  content: "Wage: ";
+  font-weight: 500;
+  text-transform: uppercase;
+  color:#8ac007;
+}
+  
+td:nth-child(5) {
+  display: block;
+  clear:both;
+}
+  
+td:nth-child(5)::before {
+  content: "Type: ";
+  font-weight: 500;
+  text-transform: uppercase;
+  color:#8ac007;
+}
+  
+td:nth-child(6) {
+  display: block;
+  clear:both;
+}
+  
+td:nth-child(6)::before {
+  content: "Posted: ";
+  font-weight: 500;
+  text-transform: uppercase;
+  color:#8ac007;
+}
+  
+td:nth-child(7) {
+  display: block;
+  clear:both;
+}
+  
+td:nth-child(7)::before {
+  content: "Due Date: ";
+  font-weight: 500;
+  text-transform: uppercase;
+  color:#8ac007;
+}
+  
+td:nth-child(8) {
+  display: block;
+  clear:both;
+}
+  
+td:nth-child(8)::before {
+  content: "Job Summary: ";
+  font-weight: 500;
+  text-transform: uppercase;
+  color:#8ac007;
+}
+  
+td:nth-child(9) {
+  display: block;
+  clear:both;
+}
+  
+td:nth-child(9)::before {
+  content: "Qualifications: ";
+  font-weight: 500;
+  text-transform: uppercase;
+  color:#8ac007;
+}
+  
+td:nth-child(10) {
+  display: block;
+  clear:both;
+}
+  
+td:nth-child(10)::before {
+  content: "Apply: ";
+  font-weight: 500;
+  text-transform: uppercase;
+  color:#8ac007;
+}
+  
+td:nth-child(11) {
+  display: block;
+  clear:both;
+}
+  
+td:nth-child(11)::before {
+  content: "Type: ";
+  font-weight: 500;
+  text-transform: uppercase;
+  color:#8ac007;
+}
+  
+ /*tr:nth-child(1n+2) {
+  background-color: green;
+}*/
+  
+  
+  /*tr:nth-child(2n+0) {
+    background-color: white;
+
+    
+  }
+  
+  tr:nth-child(2n+1) {
+    background-color: #eee;
+
+    
+  }*/
