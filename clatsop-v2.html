@@ -86,24 +86,22 @@
   })();
 </script>
   
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-    <script>
-  (function() {
-    var rows = $(".rows");
-    var rowIndex = -1;
+<script>
+var rowIndex = -1;
     
-    function showNextRow() {
-        ++rowIndex;
-       rows.eq(rowIndex % rows.length)
-            .fadeIn(2000)
-            .delay(2000)
-            .fadeOut(2000, showNextRow);
-    }
-    
-    showNextRow();
-    
-})();</script>
+function showNextRow() {
+  rowIndex++;
+  $(".rows").eq(rowIndex % $(".rows").length)
+      .fadeIn(2000)
+      .delay(2000)
+      .fadeOut(2000);
+  };
+
+setTimeout(showNextRow,500);
+setInterval(showNextRow,6000);
+</script>
 
 </body>
 </html>
