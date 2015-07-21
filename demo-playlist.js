@@ -93,6 +93,8 @@ var DemoPlaylist = function () {
    
     td;
 
+    tr.className += tr.className ? " rows" : "rows";
+    
     // loop through cells data and construct row markup
     for (var i = index; i < (index + numOfColumns); i += 1) {
       td = document.createElement("td");
