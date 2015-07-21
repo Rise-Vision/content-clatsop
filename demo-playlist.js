@@ -85,13 +85,18 @@ var DemoPlaylist = function () {
 
   function _getRow(cells, numOfColumns, index) {
     var fragment = document.createDocumentFragment(),
+        
       contents = [],
-      tr = document.createElement("tr"),
-      td;
+      
+    tr = document.createElement("tr"),
+     
+   
+    td;
 
     // loop through cells data and construct row markup
     for (var i = index; i < (index + numOfColumns); i += 1) {
       td = document.createElement("td");
+      
       td.innerHTML = (cells[i]) ? cells[i].gs$cell.$t : "";
 
       contents.push(td);
@@ -101,9 +106,12 @@ var DemoPlaylist = function () {
       tr.appendChild(content);
     });
 
+    
     fragment.appendChild(tr);
+    
 
     return fragment;
+    
   }
 
   function _build(cells) {
@@ -147,7 +155,7 @@ var DemoPlaylist = function () {
     // execute making a request for the Google Sheet data
     googleSheet.go();
   }
-
+  
   return {
     "init": init
   };

@@ -8,116 +8,28 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
 
   <!-- Handy Table styling -->
- <link rel="stylesheet" href="../pure/tables-min.css">
+ <!--<link rel="stylesheet" href="../pure/tables-min.css">-->
 
   <link rel="import" href="../rise-page/rise-page.html">
   <link rel="import" href="../rise-playlist/rise-playlist.html">
   <link rel="import" href="../rise-playlist-item/rise-playlist-item.html">
   <link rel="import" href="../rise-playlist/demo-component.html">
   <link rel="import" href="rise-google-sheet.html">
+  <!--<link rel="stylesheet" type="text/css" href="style.css">-->
 <style>
-table {
-  font-family: 'Roboto', sans-serif;
-}
   
-tr {
-  height:600px;
-}
 
-thead {
-  display:none;
-}
- 
-td:nth-child(1) {
-  display: block;
-  clear:both;
-  font-size: 60px;
-  color:grey;
-  font-weight: 100;
-  text-transform: uppercase;
-}
   
-td:nth-child(2) {
-  display: block;
-  clear:both;
-  font-size:24px;
-  font-weight: 300;
-}
-  
-td:nth-child(3) {
-  display: block;
-  clear:both;
-  padding-top: 20px;
-}
-  
-td:nth-child(3)::before {
-  content: "Location: ";
-  font-weight: 900;
-  text-transform: uppercase;
-  color:#8ac007;
-}
-  
-td:nth-child(4) {
-  display: block;
-  clear:both;
-}
-  
-td:nth-child(4)::before {
-  content: "Wage: ";
-  font-weight: 900;
-  text-transform: uppercase;
-  color:#8ac007;
-}
-  
-td:nth-child(5) {
-  display: block;
-  clear:both;
-}
-  
-td:nth-child(5)::before {
-  content: "Type: ";
-  font-weight: 900;
-  text-transform: uppercase;
-  color:#8ac007;
-}
-  
-td:nth-child(6) {
-  display: block;
-  clear:both;
-}
-  
-td:nth-child(7) {
-  display: block;
-  clear:both;
-}
-  
-td:nth-child(8) {
-  display: block;
-  clear:both;
-}
-  
-td:nth-child(9) {
-  display: block;
-  clear:both;
-}
-  
-td:nth-child(10) {
-  display: block;
-  clear:both;
-}
-  
-td:nth-child(11) {
-  display: block;
-  clear:both;
-}
-  
-  /*tr:nth-child(2n+1) {
-  background-color: #ccc;
-}*/
+.rows {display: none;}
+
 
 </style>
+
+  
 </head>
 <body unresolved>
+
+<div id="rightContainer">
 
 <rise-page display-id="VGZUDDWYAZHY">
 
@@ -128,10 +40,10 @@ td:nth-child(11) {
                          tab-id="2"
                          min-row="1" 
                          min-column="1" 
-                         max-column="11">
+                         max-column="12">
       </rise-google-sheet>
       <!-- Example HTML structure -->
-      <table id="sheetTable">
+      <table id="sheetTable" class="pure-table pure-table-bordered">
         <thead>
         <tr>
           <!-- dynamically add column header titles -->
@@ -148,6 +60,7 @@ td:nth-child(11) {
   </rise-playlist>
 
 </rise-page>
+</div>
 
 <!-- Importing javascript which is the logic in building and managing the Google Sheet content -->
 <script type="text/javascript" src="demo-playlist.js"></script>
@@ -172,6 +85,26 @@ td:nth-child(11) {
 
   })();
 </script>
+  
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script>
+  (function() {
+    $("tr").addClass("rows");
+    var rows = $(".rows");
+    var rowIndex = -1;
+    
+    function showNextRow() {
+        ++rowIndex;
+       rows.eq(rowIndex % rows.length)
+            .fadeIn(2000)
+            .delay(2000)
+            .fadeOut(2000, showNextRow);
+    }
+    
+    showNextRow();
+    
+})();</script>
 
 </body>
 </html>
