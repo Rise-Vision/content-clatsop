@@ -15,20 +15,44 @@
   <link rel="import" href="../rise-playlist-item/rise-playlist-item.html">
   <link rel="import" href="../rise-playlist/demo-component.html">
   <link rel="import" href="rise-google-sheet.html">
-  <!--<link rel="stylesheet" type="text/css" href="css/main-style.css">-->
+  <link rel="stylesheet" type="text/css" href="css/main-style.css">
+  
+  <!--Web Ticker-->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script type="text/javascript" src="js/jquery.webticker.js"></script>
+<link rel="stylesheet" href="css/webticker.css" type="text/css" media="screen"> 
+<script type="text/javascript">
+$(function(){
+	$("#webticker").webTicker({duplicate:true, speed: 100, startEmpty:false, hoverpause:false});
+});
+</script>
+
+  
 <style>
-  
 
-  
 .rows {display: none;}
-
 
 </style>
 
   
 </head>
 <body unresolved>
+<div id="logo">
+  <img src="https://storage.googleapis.com/risemedialibrary-c6ef088b-b7a8-427d-b341-abb777f28dca/ClastsopCommunityCollege_logo.png" />
+</div>
+  <div id="tagline">
+  <h1>Now Hiring! Jobs Board</h1>
+  </div>
 
+<!-- Scrolling Web Ticker -->
+  <div id="tickerContainer">
+<ul id="webticker" >	
+	<li id='item1'>
+		Maintained by Clatsop Community College Career Services Office | career.services@clatsopcc.com
+	</li>
+</ul>
+  </div>
+  
 <div id="rightContainer">
 
 <rise-page display-id="VGZUDDWYAZHY">
@@ -86,25 +110,21 @@
   })();
 </script>
   
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  
 
     <script>
-  (function() {
-    $("tr").addClass("rows");
-    var rows = $(".rows");
-    var rowIndex = -1;
+var rowIndex = -1;
     
-    function showNextRow() {
-        ++rowIndex;
-       rows.eq(rowIndex % rows.length)
-            .fadeIn(2000)
-            .delay(2000)
-            .fadeOut(2000, showNextRow);
-    }
-    
-    showNextRow();
-    
-})();</script>
+function showNextRow() {
+  rowIndex++;
+  $(".rows").eq(rowIndex % $(".rows").length)
+      .fadeIn(2000)
+      .delay(2000)
+      .fadeOut(2000);
+  };
+setTimeout(showNextRow,500);
+setInterval(showNextRow,6000);
+</script>
 
 </body>
 </html>
