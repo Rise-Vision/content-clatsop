@@ -89,9 +89,10 @@ var DemoPlaylist = function () {
       contents = [],
       
     tr = document.createElement("tr"),
-     
    
     td;
+    
+    tr.className += tr.className ? " rows" : "rows";
 
     tr.className += tr.className ? " rows" : "rows";
     

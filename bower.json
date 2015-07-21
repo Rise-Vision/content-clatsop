@@ -1,27 +1,24 @@
+
 {
-  "name": "rise-google-sheet",
-  "version": "1.0.0",
+  "name": "content-clatsop",
+  "version": "0.1.0",
   "authors": [
-    "Stuart Lees <stuart.lees@risevision.com>"
+    "mmeiers <mlm@risevision.com>"
   ],
-  "description": "Rise Vision web component for retrieving Google Sheet data",
-  "main": "rise-google-sheet.html",
-  "keywords": [
-    "polymer",
-    "web-components",
-    "google-sheets"
-  ],
-  "license": "GPLv3",
-  "homepage": "https://github.com/Rise-Vision/web-component-rise-google-sheet",
+  "description": "Client Content built using the rise-google-sheet web component",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
-    "test"
+    "bower_components",
+    "test",
+    "tests"
   ],
   "dependencies": {
     "iron-ajax": "PolymerElements/iron-ajax#^1.0.0",
     "polymer": "Polymer/polymer#^1.0.0",
-    "underscore": "~1.8.2"
+    "underscore": "~1.8.2",
+    "rise-google-sheet": "bower install https://github.com/Rise-Vision/web-component-rise-google-sheet.git"
   },
   "devDependencies": {
     "pure": "^0.6.0",
