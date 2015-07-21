@@ -1,18 +1,18 @@
 {
-  "name": "rise-google-sheet",
+  "name": "content-clatsop",
   "version": "1.0.0",
   "authors": [
-    "Stuart Lees <stuart.lees@risevision.com>"
+    "Mathew Meiers <mlm@risevision.com>"
   ],
-  "description": "Rise Vision web component for retrieving Google Sheet data",
-  "main": "rise-google-sheet.html",
+  "description": "Client content for Clatsop that uses web component for retrieving Google Sheet data",
+  "main": "index.html",
   "keywords": [
     "polymer",
     "web-components",
     "google-sheets"
   ],
   "license": "GPLv3",
-  "homepage": "https://github.com/Rise-Vision/web-component-rise-google-sheet",
+  "homepage": "https://github.com/Rise-Vision/content-clatsop",
   "ignore": [
     "**/.*",
     "node_modules",
