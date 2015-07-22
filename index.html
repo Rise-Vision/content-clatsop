@@ -4,45 +4,33 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <title>rise-google-sheet Playlist Content Demo</title>
 
-  <script src="../webcomponentsjs/webcomponents-lite.min.js"></script>
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
-
-  <!-- Handy Table styling -->
- <!--<link rel="stylesheet" href="../pure/tables-min.css">-->
-
-  <link rel="import" href="../rise-page/rise-page.html">
-  <link rel="import" href="../rise-playlist/rise-playlist.html">
-  <link rel="import" href="../rise-playlist-item/rise-playlist-item.html">
-  <link rel="import" href="../rise-playlist/demo-component.html">
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
   <link rel="import" href="rise-google-sheet.html">
   <link rel="stylesheet" type="text/css" href="css/main-style.css">
   
+  <!--Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+  
   <!--Web Ticker-->
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script type="text/javascript" src="js/jquery.webticker.js"></script>
-<link rel="stylesheet" href="css/webticker.css" type="text/css" media="screen"> 
-<script type="text/javascript">
-$(function(){
-	$("#webticker").webTicker({duplicate:true, speed: 100, startEmpty:false, hoverpause:false});
-});
-</script>
-
-  
-<style>
-
-.rows {display: none;}
-
-</style>
-
-  
+  <script type="text/javascript" src="js/jquery.webticker.js"></script>
+  <link rel="stylesheet" href="css/webticker.css" type="text/css" media="screen"> 
+  <script type="text/javascript">
+  $(function(){
+      $("#webticker").webTicker({duplicate:true, speed: 100, startEmpty:false, hoverpause:false});
+  });
+  </script>
 </head>
+  
 <body unresolved>
+  <!--Header-->
 <div id="logo">
   <img src="https://storage.googleapis.com/risemedialibrary-c6ef088b-b7a8-427d-b341-abb777f28dca/ClastsopCommunityCollege_logo.png" />
 </div>
-  <div id="tagline">
+  
+<div id="tagline">
   <h1>Now Hiring! Jobs Board</h1>
-  </div>
+</div>
 
 <!-- Scrolling Web Ticker -->
   <div id="tickerContainer">
@@ -55,10 +43,7 @@ $(function(){
   
 <div id="rightContainer">
 
-<rise-page display-id="VGZUDDWYAZHY">
 
-  <rise-playlist id="playlist">
-    <rise-playlist-item duration="5">
       <rise-google-sheet id="googleSheet"
                          key="1FvKd1HSydNUr6lbY0Fvvg9yoIgKwxEHlgR1RZClx9YY"
                          tab-id="2"
@@ -77,13 +62,7 @@ $(function(){
         <!-- dynamically populate table cells -->
         </tbody>
       </table>
-    </rise-playlist-item>
-    <!--<rise-playlist-item duration="5">
-         <demo-component id="duck" src="https://goo.gl/fyZFTU"></demo-component>
-      </rise-playlist-item>-->
-  </rise-playlist>
-
-</rise-page>
+    
 </div>
 
 <!-- Importing javascript which is the logic in building and managing the Google Sheet content -->
@@ -112,7 +91,7 @@ $(function(){
   
   
 
-    <script>
+<script>
 var rowIndex = -1;
     
 function showNextRow() {
