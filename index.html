@@ -11,10 +11,10 @@
   <!--Fonts-->
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
   
-  <!--Web Ticker-->
+  
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <!--Web Ticker-->
   <script type="text/javascript" src="js/jquery.webticker.js"></script>
-  <link rel="stylesheet" href="css/webticker.css" type="text/css" media="screen"> 
   <script type="text/javascript">
   $(function(){
       $("#webticker").webTicker({duplicate:true, speed: 100, startEmpty:false, hoverpause:false});
@@ -42,8 +42,6 @@
   </div>
   
 <div id="rightContainer">
-
-
       <rise-google-sheet id="googleSheet"
                          key="1FvKd1HSydNUr6lbY0Fvvg9yoIgKwxEHlgR1RZClx9YY"
                          tab-id="2"
@@ -52,7 +50,7 @@
                          max-column="12">
       </rise-google-sheet>
       <!-- Example HTML structure -->
-      <table id="sheetTable" class="pure-table pure-table-bordered">
+      <table id="sheetTable">
         <thead>
         <tr>
           <!-- dynamically add column header titles -->
@@ -62,7 +60,27 @@
         <!-- dynamically populate table cells -->
         </tbody>
       </table>
-    
+</div>
+  
+<div id="leftContainer">
+      <rise-google-sheet id="googleSheet"
+                         key="1FvKd1HSydNUr6lbY0Fvvg9yoIgKwxEHlgR1RZClx9YY"
+                         tab-id="2"
+                         min-row="1" 
+                         min-column="1" 
+                         max-column="2">
+      </rise-google-sheet>
+      <!-- Example HTML structure -->
+      <table id="sheetTable">
+        <thead>
+        <tr>
+          <!-- dynamically add column header titles -->
+        </tr>
+        </thead>
+        <tbody>
+        <!-- dynamically populate table cells -->
+        </tbody>
+      </table>
 </div>
 
 <!-- Importing javascript which is the logic in building and managing the Google Sheet content -->
