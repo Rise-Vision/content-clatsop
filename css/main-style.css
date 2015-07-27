@@ -272,3 +272,27 @@ td:nth-child(11)::before {
 
     
   }*/
+
+
+/*temporary CSS for left side*/
+  .leftBody {
+    max-height: 70vh;
+    height:100%;
+    overflow: hidden;
+  }
+
+  .leftBody tr {
+    height:auto;
+  }
+
+  .leftBody td {
+    font-size: 20px;
+  }
+
+  .leftBody td:nth-child(2) {
+    margin-bottom: 20px;
+  }
+
+  .leftContainer {
+    overflow: hidden;
+  }
