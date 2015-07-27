@@ -28,7 +28,7 @@ var DemoPlaylist = function () {
     });
 
     // dispatch the event for rise-playlist to receive
-    document.querySelector("#googleSheet").dispatchEvent(readyEvent);
+    document.querySelector(".googleSheet").dispatchEvent(readyEvent);
   }
 
   function _clear() {
@@ -93,6 +93,8 @@ var DemoPlaylist = function () {
     td;
     
     tr.className += tr.className ? " rows" : "rows";
+
+    tr.className += tr.className ? " rows" : "rows";
     
     // loop through cells data and construct row markup
     for (var i = index; i < (index + numOfColumns); i += 1) {
@@ -141,7 +143,7 @@ var DemoPlaylist = function () {
 
   function init() {
     // reference to rise-google-sheet element
-    var googleSheet = document.querySelector("#googleSheet");
+    var googleSheet = document.querySelector(".googleSheet");
 
     // register for the "rise-google-sheet-response" event that rise-google-sheet fires
     googleSheet.addEventListener("rise-google-sheet-response", function(e) {

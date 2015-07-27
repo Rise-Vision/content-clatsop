@@ -1,4 +1,4 @@
-var DemoPlaylist = function () {
+var DemoPlaylist2 = function () {
   "use strict";
 
   // provide the playback functions that control this content which rise-playlist will call
@@ -28,12 +28,12 @@ var DemoPlaylist = function () {
     });
 
     // dispatch the event for rise-playlist to receive
-    document.querySelector("#googleSheet").dispatchEvent(readyEvent);
+    document.querySelector("#googleSheet2").dispatchEvent(readyEvent);
   }
 
   function _clear() {
     var thead = document.querySelector("thead tr"),
-      tbody = document.getElementsByTagName("tbody");
+      tbody = document.getElementsByClassName("leftBody");
 
     while(thead.firstChild) {
       thead.removeChild(thead.firstChild);
@@ -92,7 +92,7 @@ var DemoPlaylist = function () {
    
     td;
     
-    tr.className += tr.className ? " rows" : "rows";
+    // tr.className += tr.className ? " left-rows" : "left-rows";
     
     // loop through cells data and construct row markup
     for (var i = index; i < (index + numOfColumns); i += 1) {
@@ -117,7 +117,7 @@ var DemoPlaylist = function () {
 
   function _build(cells) {
     var numOfColumns = _getNumOfColumns(cells),
-      tbody = document.getElementsByTagName("tbody"),
+      tbody = document.getElementsByClassName("leftBody"),
       fragment = document.createDocumentFragment(),
       rows = [],
       row;
@@ -141,10 +141,10 @@ var DemoPlaylist = function () {
 
   function init() {
     // reference to rise-google-sheet element
-    var googleSheet = document.querySelector("#googleSheet");
+    var googleSheet2 = document.querySelector("#googleSheet2");
 
     // register for the "rise-google-sheet-response" event that rise-google-sheet fires
-    googleSheet.addEventListener("rise-google-sheet-response", function(e) {
+    googleSheet2.addEventListener("rise-google-sheet-response", function(e) {
 
       _clear();
 
@@ -154,7 +154,7 @@ var DemoPlaylist = function () {
     });
 
     // execute making a request for the Google Sheet data
-    googleSheet.go();
+    googleSheet2.go();
   }
   
   return {
