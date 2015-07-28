@@ -92,7 +92,7 @@ var DemoPlaylist2 = function () {
    
     td;
     
-    // tr.className += tr.className ? " left-rows" : "left-rows";
+       tr.className += tr.className ? " leftRows" : "leftRows";
     
     // loop through cells data and construct row markup
     for (var i = index; i < (index + numOfColumns); i += 1) {

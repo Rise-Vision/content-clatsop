@@ -121,6 +121,7 @@
   
 
 <script>
+//script for the fade in/out functionality on right hand side of template
 var rowIndex = -1;
     
 function showNextRow() {
@@ -132,6 +133,36 @@ function showNextRow() {
   };
 setTimeout(showNextRow,500);
 setInterval(showNextRow,6000);
+
+//script for the scrolling on the left hand side of the template
+var leftItems = document.getElementsByClassName('leftRows');
+var leftTable = document.getElementById('sheetTable2');
+var heightOffset = 550;
+var heightToScroll;
+
+function getHeight(){
+heightToScroll = leftTable.offsetHeight;
+console.log(heightToScroll);
+return heightToScroll;
+}
+
+setTimeout(getHeight,1000);
+
+var $scrollingElement = $('#sheetTable2');
+
+function scrollDown(){
+  $scrollingElement.delay(2000).fadeOut();
+  $scrollingElement.animate({'top':'0'},30);
+  $scrollingElement.fadeIn();
+  scrollUp();
+}
+
+function scrollUp(){
+  $scrollingElement.delay(2000).animate({'top': -(heightToScroll - heightOffset)},30000, "linear", scrollDown);
+}
+
+setTimeout(scrollUp,1100);
+
 </script>
 
 </body>

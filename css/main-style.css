@@ -24,7 +24,7 @@ body {
   top:16%;
   left:1.5%;
   width:23.75%;
-  height: 74%;
+  height: 60%;
   overflow: hidden;
 }
 
@@ -283,6 +283,12 @@ td:nth-child(11)::before {
 
   .leftBody tr {
     height:auto;
+    position: relative;
+    top:0;
+  }
+
+  .leftBody tr:nth-child(2n) {
+      background-color: rgba(0,0,0,0.2);
   }
 
   .leftBody td {
@@ -293,6 +299,10 @@ td:nth-child(11)::before {
     margin-bottom: 20px;
   }
 
-  .leftContainer {
-    overflow: hidden;
+
+  #sheetTable2 {
+    position: absolute;
+    height: auto;
+    opacity:1;
   }
+
