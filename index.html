@@ -13,13 +13,7 @@
   
   
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <!--Web Ticker-->
-  <script type="text/javascript" src="js/jquery.webticker.js"></script>
-  <script type="text/javascript">
-  $(function(){
-      $("#webticker").webTicker({duplicate:true, speed: 100, startEmpty:false, hoverpause:false});
-  });
-  </script>
+  
 </head>
   
 <body unresolved>
@@ -32,18 +26,15 @@
   <h1>Now Hiring! Jobs Board</h1>
 </div>
 
-<!-- Scrolling Web Ticker -->
+<!-- Footer -->
   <div id="tickerContainer">
-    <ul id="webticker" >	
-        <li id='item1'>
-            Maintained by Clatsop Community College Career Services Office | career.services@clatsopcc.com
-        </li>
-    </ul>
+            <h2>Maintained by Clatsop Community College Career Services Office - <span class="green">career.services@clatsopcc.com</span>
+              </h2>
   </div>
   
-  <!--background-->
+   <!--background-->
   <div id="background">
-    <img src="https://storage.googleapis.com/risemedialibrary-c6ef088b-b7a8-427d-b341-abb777f28dca/ClastsopCommunityCollege_background.jpg"/>
+    <img src="img/green-bg.jpg"/>
   </div>
   
       <rise-google-sheet id="googleSheet"
@@ -121,6 +112,7 @@
   
 
 <script>
+//script for the fade in/out functionality on right hand side of template
 var rowIndex = -1;
     
 function showNextRow() {
@@ -132,6 +124,36 @@ function showNextRow() {
   };
 setTimeout(showNextRow,500);
 setInterval(showNextRow,6000);
+
+//script for the scrolling on the left hand side of the template
+var leftItems = document.getElementsByClassName('leftRows');
+var leftTable = document.getElementById('sheetTable2');
+var heightOffset = 550;
+var heightToScroll;
+
+function getHeight(){
+heightToScroll = leftTable.offsetHeight;
+console.log(heightToScroll);
+return heightToScroll;
+}
+
+setTimeout(getHeight,1000);
+
+var $scrollingElement = $('#sheetTable2');
+
+function scrollDown(){
+  $scrollingElement.delay(2000).fadeOut();
+  $scrollingElement.animate({'top':'0'},30);
+  $scrollingElement.fadeIn();
+  scrollUp();
+}
+
+function scrollUp(){
+  $scrollingElement.delay(2000).animate({'top': -(heightToScroll - heightOffset)},30000, "linear", scrollDown);
+}
+
+setTimeout(scrollUp,1100);
+
 </script>
 
 </body>
