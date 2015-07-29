@@ -42,7 +42,8 @@
                          tab-id="2"
                          min-row="1" 
                          min-column="1" 
-                         max-column="12">
+                         max-column="12"
+                         refresh="300">
       </rise-google-sheet>
 <div id="rightContainer">
       <!-- Example HTML structure -->
@@ -65,7 +66,8 @@
                          tab-id="2"
                          min-row="1" 
                          min-column="1" 
-                         max-column="2">
+                         max-column="2"
+                         refresh="300">
       </rise-google-sheet>
       <!-- Example HTML structure -->
       <table id="sheetTable2">
@@ -133,7 +135,6 @@ var heightToScroll;
 
 function getHeight(){
 heightToScroll = leftTable.offsetHeight;
-console.log(heightToScroll);
 return heightToScroll;
 }
 
