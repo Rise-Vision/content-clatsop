@@ -18,7 +18,7 @@
     "iron-ajax": "PolymerElements/iron-ajax#^1.0.0",
     "polymer": "Polymer/polymer#^1.0.0",
     "underscore": "~1.8.2",
-    "rise-google-sheet": "bower install https://github.com/Rise-Vision/web-component-rise-google-sheet.git"
+    "rise-google-sheet": "bower install https://github.com/Rise-Vision/rise-google-sheet.git"
   },
   "devDependencies": {
     "pure": "^0.6.0",
